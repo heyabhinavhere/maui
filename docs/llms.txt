@@ -1,0 +1,27 @@
+# Maui
+
+> Maui is a free Mac app that lives in the notch at the top of the screen. It keeps your recent screenshots ready to drag, holds the files you drop on it (to keep, convert, or send to your other Mac), and shows the questions coding agents ask — from Claude Code and Codex — so you can answer them at the notch.
+
+- Price: free. No account, no analytics, no telemetry.
+- Needs: macOS 26 or later, on a Mac with Apple silicon. On a Mac without a notch, or an external display, it sits as a small shape at the top of the screen.
+- Not out yet: coming soon, from this site.
+- Made by one person, Abhinav.
+
+## What it does
+
+- Screenshots: every screenshot lands in the notch; copy its text, link or code, or drag one or several anywhere.
+- Files: drop a file on the notch to keep a copy in the Tray, send it to your other Mac, or convert it to another format or to its text.
+- Coding agents: Claude Code's questions, plans and permission requests open at the notch, and you answer with a click, a word or a screenshot; Codex's command approvals too. Apps shows each Claude Code and Codex session as it works.
+- Focus: during a focus session, questions from other projects wait until it ends.
+- Quick note: ⌃⌥N in any app opens one line under the notch, kept in the Tray.
+- Two Macs (Reach): send things to your other Mac, after a one-time pairing where both Macs show the same six digits.
+- Read: a teleprompter right under the camera.
+- Usage: how much of your Claude Code and Codex limits is left, and when they reset.
+- GitHub: your pull requests, one card at a time; approve and merge, checked against the exact commit you saw.
+
+## Pages
+
+- [Maui](https://heyabhinavhere.github.io/maui/): what Maui does, with recordings of the app, and answers to common questions.
+- [Privacy](https://heyabhinavhere.github.io/maui/privacy.html): everything that leaves your Mac when you use Maui, and when.
+- [Support](https://heyabhinavhere.github.io/maui/support.html): how to get help, requirements, and how to uninstall Maui completely.
+- [What's new](https://heyabhinavhere.github.io/maui/changelog.html): what changed in each version.

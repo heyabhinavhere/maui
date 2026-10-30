@@ -1,0 +1,68 @@
+/* MAUI'S SITE — what every page shares: the grey ground, the type, the bar at the top, the footer, and the plain
+   reading pages (privacy, support, what's new). The home page's posters add assets/home.css. */
+:root {
+  color-scheme: light;
+  --bone: #eeeff1;
+  --ink: #0b0b0c;
+  --soft: rgba(11, 11, 12, .62);    /* 5.3:1 on the ground (WCAG AA) */
+  --faint: rgba(11, 11, 12, .5);     /* the posters' counters and arrows */
+  --line: rgba(11, 11, 12, .12);
+  --chip: rgba(11, 11, 12, .055);
+  --m: clamp(20px, 2.4vw, 40px);
+  --sys: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+  --disp: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bone); color: var(--ink); font: 400 17px/1.5 var(--sys); letter-spacing: -.012em; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+::selection { background: var(--ink); color: var(--bone); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+img, video { max-width: 100%; }
+kbd { font: 500 .88em/1 var(--sys); padding: 1px 5px; border-radius: 5px; box-shadow: inset 0 0 0 1px currentColor; }
+code { font: .82em var(--mono); background: var(--chip); padding: 2px 6px; border-radius: 6px; }
+
+/* the way past the posters, for the keyboard */
+.skip { position: absolute; z-index: 20; left: var(--m); top: -60px; padding: 10px 16px; border-radius: 999px; background: var(--ink); color: var(--bone); text-decoration: none; font-weight: 600; }
+.skip:focus { top: var(--m); }
+
+/* the bar: the wordmark on the left, where to go on the right */
+.bar { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: var(--m); }
+.mark { font: 650 19px/1 var(--disp); letter-spacing: -.022em; text-decoration: none; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 22px; font: 500 15px/1 var(--sys); }
+.links a { text-decoration: none; color: var(--soft); }
+.links a:hover, .links a[aria-current="page"] { color: var(--ink); }
+
+/* the one button */
+.pill { display: inline-flex; width: max-content; align-items: center; gap: 10px; padding: 12px 20px 12px 14px; border-radius: 999px; background: var(--ink); color: var(--bone); text-decoration: none; font: 600 15px/1 var(--sys); letter-spacing: -.01em; transition: transform .3s cubic-bezier(.3, 1.4, .4, 1); }
+.pill:hover { transform: scale(1.03); }
+/* before the first release the button's place says so, quietly, and is not a button */
+.pill.soon { padding-left: 20px; background: var(--chip); color: var(--soft); cursor: default; }
+.pill.soon:hover { transform: none; }
+.pill svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* the reading pages */
+.prose { max-width: 700px; margin: 0 auto; padding: 6vh var(--m) 12vh; }
+.prose h1 { margin: 0 0 18px; font: 800 clamp(48px, 9vw, 88px)/.9 var(--disp); letter-spacing: -.045em; }
+.prose h2 { margin: 44px 0 10px; font: 650 22px/1.25 var(--disp); letter-spacing: -.02em; }
+.prose p, .prose li { color: var(--ink); }
+.prose .lede { font-size: 19px; color: var(--soft); }
+.soft { color: var(--soft); }
+.prose ul, .prose ol { padding-left: 1.2em; }
+.prose li { margin: 6px 0; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: 10px 8px 10px 0; border-top: 1px solid var(--line); }
+.prose th { font-weight: 600; }
+.prose code { word-break: break-word; }
+
+/* the foot of every page */
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 28px; margin: 0 var(--m); padding: 22px 0 34px; border-top: 1px solid var(--line); font: 400 13.5px/1.4 var(--sys); color: var(--soft); }
+.foot p { margin: 0; }
+.foot nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.foot a { text-decoration: none; }
+.foot a:hover { color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pill { transition: none; }
+}

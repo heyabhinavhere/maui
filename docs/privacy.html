@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Maui</title>
+<meta name="description" content="Maui has no account, no analytics and no telemetry. Here is everything that leaves your Mac when you use Maui, and when.">
+<link rel="canonical" href="https://heyabhinavhere.github.io/maui/privacy.html">
+<meta name="theme-color" content="#eeeff1">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maui">
+<meta property="og:url" content="https://heyabhinavhere.github.io/maui/privacy.html">
+<meta property="og:title" content="Privacy — Maui">
+<meta property="og:description" content="Maui has no account, no analytics and no telemetry. Here is everything that leaves your Mac when you use Maui, and when.">
+<meta property="og:image" content="https://heyabhinavhere.github.io/maui/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <a class="mark" href="./">Maui</a>
+  <nav class="links" aria-label="Site"><a href="privacy.html" aria-current="page">Privacy</a><a href="support.html">Support</a><a href="changelog.html">What’s new</a><a href="https://github.com/heyabhinavhere/maui">GitHub</a></nav>
+</header>
+<main class="prose">
+<h1>Privacy.</h1>
+<p class="lede">Maui has no account, no analytics and no telemetry, and no server of ours keeps anything about you. What follows is everything that does leave your Mac, and when.</p>
+
+<h2>What stays on your Mac</h2>
+<ul>
+<li>Screenshots: Maui keeps a reference to each file, never a copy, and reads their text, links and barcodes with macOS's own on-device Vision. That text stays with the screenshot's card on this Mac until the card is cleared; it is never logged or sent.</li>
+<li>The Tray: copies of what you keep, in Maui's own folder. Your originals are only read.</li>
+<li>Converting files uses macOS's own frameworks on this Mac — no cloud conversion.</li>
+<li>Coding agents run on your Mac; Maui talks to them only through a private local socket, never a network port.</li>
+<li>A screenshot or file you attach to an agent's question is copied where that agent can read it on this Mac — its own session folder, or Maui's own folder, which clears copies older than a day each time Maui starts or you attach another file. What the agent then does with it is the agent's, as with anything you give it — Claude Code and Codex may send what they read to their own services.</li>
+<li>The usage vials, and Claude Code's and Codex's pages in Apps, read those agents' own records on this Mac — how much of their limits is left, and each session's name and what it is doing now. Nothing about them is sent anywhere.</li>
+<li>When a Claude Code session starts, Maui's plugin tells Maui which app or terminal it runs in, so the session's line can take you there. Maui keeps that on this Mac and drops places more than two days old.</li>
+</ul>
+
+<h2>What uses the network — only when you use it</h2>
+<table>
+<tr><th>Feature</th><th>What is sent, to whom</th></tr>
+<tr><td>GitHub, if you connect it</td><td>Requests to GitHub's API, as you. Signing in, refreshing the session and disconnecting go through a small exchange service of ours on Cloudflare that holds the app's client secret, keeps nothing, and logs no tokens. Your session is stored in your Keychain, and a copy of your pull requests' titles and states is kept on this Mac so Maui opens quickly.</td></tr>
+<tr><td>Reach, if you turn it on</td><td>Maui looks for your other Macs nearby once you choose <b>Look for my other Macs</b>, and keeps looking while it runs once a Mac is paired. While it looks, it announces this Mac's name (macOS usually puts your first name in it), its Reach id and its public key to devices nearby. Anything that connects is told this Mac's model and icon. When a Mac asks to pair, this Mac's wallpaper is shown to it as soon as the request appears, before the pairing is proven. After pairing, what you send goes only to the Mac you chose, over a session encrypted with keys tied to that pairing.</td></tr>
+<tr><td>Updates</td><td>When Maui first opens and then about once a day, it asks its update feed on GitHub whether a newer version exists. The request carries Maui's and its updater's names and versions; like any request, it shows GitHub your IP address. When there is an update, Maui shows its notes from this site and downloads it from GitHub. You can turn checking off in Settings → General.</td></tr>
+<tr><td>Meetings, if you turn them on</td><td>Maui reads your calendars on this Mac through macOS. Joining a meeting opens its link in your browser or meeting app.</td></tr>
+</table>
+
+<h2>What Reach does not protect against</h2>
+<p>Pairing shows the same six digits on both Macs. The digits are fixed for a pair of Macs, so comparing them does not stop someone who is nearby while you pair from placing themselves in the middle. Pair where you trust who is around, and unpair a Mac you no longer recognise (Settings → Reach).</p>
+
+<h2>Permissions</h2>
+<p>Maui asks for each macOS permission at the moment you use what needs it: your screenshot folder, Calendar, Local Network. It never asks for Screen Recording, your camera or your microphone.</p>
+
+<p class="soft">Questions: see <a href="support.html">Support</a>.</p>
+</main>
+<footer class="foot">
+  <p>Maui is free, and made with care by Abhinav.</p>
+  <nav aria-label="Footer"><a href="./">Maui</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="changelog.html">What’s new</a><a href="https://github.com/heyabhinavhere/maui">GitHub</a></nav>
+</footer>
+</body>
+</html>

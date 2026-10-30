@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maui — screenshots, files and coding agents in your Mac’s notch</title>
+<meta name="description" content="Maui is a free app for your Mac’s notch. It keeps your screenshots, holds the files you drop on it, and lets you answer Claude Code and Codex right at the notch.">
+<link rel="canonical" href="https://heyabhinavhere.github.io/maui/">
+<meta name="theme-color" content="#eeeff1">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maui">
+<meta property="og:url" content="https://heyabhinavhere.github.io/maui/">
+<meta property="og:title" content="Maui — a small friend for the notch of your Mac">
+<meta property="og:description" content="Free. It keeps your screenshots, holds the files you drop on it, and brings your coding agents’ questions to you.">
+<meta property="og:image" content="https://heyabhinavhere.github.io/maui/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Maui app icon: a black notch with two eyes on a silver tile, above the word Maui.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/home.css">
+<!-- The posters need modules; a browser without them, or a page whose script fails to load, keeps the plain page. -->
+<script>if ('noModule' in HTMLScriptElement.prototype) document.documentElement.classList.add('js');</script>
+<script type="module" src="assets/home.js" onerror="document.documentElement.classList.remove('js')"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://heyabhinavhere.github.io/maui/#website",
+      "name": "Maui",
+      "url": "https://heyabhinavhere.github.io/maui/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://heyabhinavhere.github.io/maui/#app",
+      "name": "Maui",
+      "description": "Maui is a free app for the notch of a Mac. It keeps your screenshots, holds the files you drop on it, converts them or sends them to your other Mac, and lets you answer Claude Code and Codex at the notch.",
+      "url": "https://heyabhinavhere.github.io/maui/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "macOS 26 or later",
+      "processorRequirements": "Apple silicon",
+      "releaseNotes": "https://heyabhinavhere.github.io/maui/changelog.html",
+      "image": "https://heyabhinavhere.github.io/maui/icon-512.png",
+      "screenshot": [
+        "https://heyabhinavhere.github.io/maui/media/stills/home.jpg",
+        "https://heyabhinavhere.github.io/maui/media/stills/files.jpg",
+        "https://heyabhinavhere.github.io/maui/media/stills/agent.jpg",
+        "https://heyabhinavhere.github.io/maui/media/stills/focus.jpg"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Abhinav" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://heyabhinavhere.github.io/maui/#questions",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is Maui?", "acceptedAnswer": { "@type": "Answer", "text": "Maui is a free Mac app that lives in the notch at the top of the screen. It keeps your recent screenshots ready to drag, holds the files you drop on it, and shows the questions your coding agents ask — from Claude Code and Codex — so you can answer them without switching windows." } },
+        { "@type": "Question", "name": "What does Maui need?", "acceptedAnswer": { "@type": "Answer", "text": "macOS 26 or later, on a Mac with Apple silicon. A MacBook with a notch is Maui's home; on a Mac without one, or on an external display, Maui sits as a small shape at the top of the screen." } },
+        { "@type": "Question", "name": "Is Maui free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Maui is free, with no account and nothing to sign up for." } },
+        { "@type": "Question", "name": "Does Maui collect any data?", "acceptedAnswer": { "@type": "Answer", "text": "No. Maui has no account, no analytics and no telemetry. It reads your screenshots' text with macOS's own on-device Vision, and converts files on your Mac. It uses the network only for what you turn on: GitHub, sending to your other Mac, and checking for updates." } },
+        { "@type": "Question", "name": "How does Maui work with Claude Code and Codex?", "acceptedAnswer": { "@type": "Answer", "text": "In Maui, open Apps, then Claude Code, then Connect. From then on Claude Code's questions, plans and permission requests open at the notch, and you answer with a click, a word, or a screenshot. Codex's command approvals come to the notch too, and Apps shows each of your sessions as it works." } },
+        { "@type": "Question", "name": "How do I install Maui?", "acceptedAnswer": { "@type": "Answer", "text": "Maui isn’t out yet. When it is: download it, open the download, and drag Maui to Applications. Open it: Maui has no window and no Dock icon, so look at your notch, or press Command-Shift-I. macOS asks for each permission only when you first use the feature that needs it." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#questions">Skip to the questions</a>
+
+<div class="show">
+<header class="bar">
+  <a class="mark" href="./">Maui</a>
+  <nav class="links" aria-label="Site"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="changelog.html">What’s new</a><a href="https://github.com/heyabhinavhere/maui">GitHub</a></nav>
+</header>
+
+<!-- THE STORY: one poster per thing Maui does. Each section is complete on its own: its word, its caption, the steps
+     its recording shows, and a still of the real app. assets/home.js turns them into the posters — one black shape
+     hanging from the top of the page that becomes each one — and plays each recording on that shape's screen. -->
+<main id="story">
+
+  <section class="poster" id="maui" data-kind="head">
+    <h1 class="word">Maui</h1>
+    <div class="cap">
+      <p><b>A small friend for the notch of your Mac.</b> It keeps your screenshots, holds the files you drop on it, and brings your coding agents’ questions to you.</p>
+      <span class="pill soon">Coming soon</span>
+      <p class="note">macOS 26 or later · Apple silicon</p>
+    </div>
+  </section>
+
+  <section class="poster" id="screenshots" data-kind="screen" data-clip="home" data-loop>
+    <h2 class="word">Screenshots.</h2>
+    <div class="cap">
+      <p><b>Every screenshot lands in the notch.</b> Drag one anywhere, or ⌘-click a few and drag them together.</p>
+      <ol class="steps"><li data-t="0">The notch, closed</li><li data-t=".8">It peeks when you point at it</li><li data-t="1.9">Click: your screenshots</li><li data-t="4.2" class="quiet">The notch closes</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/home.jpg" width="900" height="440" loading="lazy" decoding="async" alt="Maui’s Home under the notch: six screenshots fanned out in a row, with Home, Tray, Apps and Settings below."></figure>
+  </section>
+
+  <section class="poster" id="files" data-kind="screen" data-clip="files">
+    <h2 class="word">Files.</h2>
+    <div class="cap">
+      <p><b>Drop a file on the notch.</b> Keep it in your Tray, send it to your other Mac, or convert it to another format, or to its text.</p>
+      <ol class="steps"><li data-t="0">A file held over the notch</li><li data-t=".2">Keep, Send or Convert</li><li data-t="1.15">Convert</li><li data-t="1.7">Choose a size and a format</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/files.jpg" width="900" height="440" loading="lazy" decoding="async" alt="Converting a picture at the notch: a size dial at 100%, and PNG, JPEG, HEIC, PDF and Text below it with each one’s file size."></figure>
+  </section>
+
+  <section class="poster" id="agents" data-kind="screen" data-clip="agent" data-loop>
+    <h2 class="word">Agents.</h2>
+    <div class="cap">
+      <p><b>Claude Code asks; you answer at the notch.</b> The question opens a little beside the camera. Pick an answer and Claude carries on. Codex’s command approvals come here too.</p>
+      <ol class="steps"><li data-t="0">Claude is working</li><li data-t=".5">Claude asks</li><li data-t="2.1">You answer</li><li data-t="5.3">Claude carries on</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/agent.jpg" width="900" height="440" loading="lazy" decoding="async" alt="A Claude Code question open at the notch: “Keep the old timer migration?” with the answers Keep it, Drop it and Something else."></figure>
+  </section>
+
+  <section class="poster" id="sessions" data-kind="screen" data-clip="sessions">
+    <h2 class="word">Sessions.</h2>
+    <div class="cap">
+      <p><b>See what your agents are doing.</b> Each Claude Code and Codex session in a line: what it’s working on now, and what it finished.</p>
+      <ol class="steps"><li data-t="0">Each session, in its own words</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/sessions.jpg" width="900" height="440" loading="lazy" decoding="async" alt="Claude Code’s page in Maui: one session running the width tests, one fixing a sign-in redirect loop, and one that finished writing release notes."></figure>
+  </section>
+
+  <section class="poster" id="focus" data-kind="screen" data-clip="focus">
+    <h2 class="word">Focus.</h2>
+    <div class="cap">
+      <p><b>Start a focus session, and Maui keeps it quiet.</b> Questions from your other projects wait until it ends, as drops of light on a line that shows the time left.</p>
+      <ol class="steps"><li data-t="0">Pick a length, then Start</li><li data-t="1.7">The line lands on the notch, then goes dark</li><li data-t="4.2">A question from another project, held</li><li data-t="5.7">And another</li><li data-t="7.3">A glance: the time left, and what waits</li><li data-t="11">The line runs out</li><li data-t="12.8">Two waited</li><li data-t="13.5">Now they come to you</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/focus.jpg" width="900" height="440" loading="lazy" decoding="async" alt="The focus card at the notch: 45 minutes on a slider, Start, and the time the session will end."></figure>
+  </section>
+
+  <section class="poster" id="notes" data-kind="screen" data-clip="note" data-loop>
+    <h2 class="word">Notes.</h2>
+    <div class="cap">
+      <p><b>Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>N</kbd> in any app.</b> Write one line and press Return. It’s kept in the Tray.</p>
+      <ol class="steps"><li data-t="0">In any app</li><li data-t=".3">⌃⌥N opens a note</li><li data-t=".9">Write one line</li><li data-t="2.3">Return keeps it</li><li data-t="4.3">It’s in the Tray</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/note.jpg" width="900" height="440" loading="lazy" decoding="async" alt="A quick note under the notch: “Call the bank about the card before Friday”."></figure>
+  </section>
+
+  <section class="poster" id="two-macs" data-kind="screen" data-clip="macs">
+    <h2 class="word">Two Macs.</h2>
+    <div class="cap">
+      <p><b>Send it to your other Mac.</b> The first time, you check that both Macs show the same six digits.</p>
+      <ol class="steps"><li data-t="0">Send, to MacBook Air</li><li data-t=".4">Which Mac?</li><li data-t="2.3">The first time: the same six digits</li><li data-t="6.5">Paired</li><li data-t="12.4">It’s on MacBook Air</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/macs.jpg" width="900" height="440" loading="lazy" decoding="async" alt="Pairing two Macs at the notch: Your Mac and MacBook Air side by side, the six digits 564 275, and Pair."></figure>
+  </section>
+
+  <section class="poster" id="read" data-kind="screen" data-clip="read">
+    <h2 class="word">Read.</h2>
+    <div class="cap">
+      <p><b>Read your notes under the camera.</b> On a call they scroll right below the lens, so you keep looking at people.</p>
+      <ol class="steps"><li data-t="0">Your notes, right under the camera</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/read.jpg" width="900" height="440" loading="lazy" decoding="async" alt="Maui’s teleprompter under the camera, reading “First: what shipped last week, and what it fixed.”"></figure>
+  </section>
+
+  <section class="poster" id="usage" data-kind="screen" data-clip="usage">
+    <h2 class="word">Usage.</h2>
+    <div class="cap">
+      <p><b>See how much of your week is left.</b> Your Claude Code and Codex limits as glass vials, and when they reset.</p>
+      <ol class="steps"><li data-t="0">The vials sit beside the date</li><li data-t="1.05">Your week, in full</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/usage.jpg" width="900" height="440" loading="lazy" decoding="async" alt="Maui’s Usage page: Claude Code’s session at 88% left and its week at 59% left, and Codex’s week at 99% left, each as a glass vial."></figure>
+  </section>
+
+  <section class="poster" id="github" data-kind="screen" data-clip="pr">
+    <h2 class="word">GitHub.</h2>
+    <div class="cap">
+      <p><b>Approve and merge from the notch.</b> Your pull requests, one card at a time, checked against the exact commit you saw.</p>
+      <ol class="steps"><li data-t="0">GitHub, beside your screenshots</li><li data-t=".8">A review is waiting</li><li data-t="2.4">Approve it from the notch</li></ol>
+    </div>
+    <figure class="still"><img src="media/stills/pr.jpg" width="900" height="440" loading="lazy" decoding="async" alt="A pull request at the notch: “Refine shell motion continuity”, ready to approve, with an Approve button."></figure>
+  </section>
+
+  <section class="poster" id="hi" data-kind="head">
+    <h2 class="word">Say hi.</h2>
+    <div class="cap">
+      <p><b>Maui is free.</b> No account, nothing to sign up for. Made with care by one person.</p>
+    </div>
+  </section>
+
+  <section class="poster" id="get" data-kind="icon">
+    <h2 class="word">Get Maui.</h2>
+    <div class="end">
+      <span class="pill soon">Coming soon</span>
+      <p class="meta">Free · macOS 26 or later · Apple silicon</p>
+    </div>
+  </section>
+</main>
+</div>
+
+<!-- THE FACTS, in plain words: what search engines and assistants quote, and what a person checks before they
+     download. Every answer stands on its own. -->
+<section class="facts" id="questions" aria-labelledby="questions-title">
+  <h2 id="questions-title" class="facts-title">Questions.</h2>
+  <div class="qa">
+    <div><h3>What is Maui?</h3><p>Maui is a free Mac app that lives in the notch at the top of the screen. It keeps your recent screenshots ready to drag, holds the files you drop on it, and shows the questions your coding agents ask — from Claude Code and Codex — so you can answer them without switching windows.</p></div>
+    <div><h3>What does Maui need?</h3><p>macOS 26 or later, on a Mac with Apple silicon. A MacBook with a notch is Maui’s home; on a Mac without one, or on an external display, Maui sits as a small shape at the top of the screen.</p></div>
+    <div><h3>Is Maui free?</h3><p>Yes. Maui is free, with no account and nothing to sign up for.</p></div>
+    <div><h3>Does Maui collect any data?</h3><p>No. Maui has no account, no analytics and no telemetry. It reads your screenshots’ text with macOS’s own on-device Vision, and converts files on your Mac. It uses the network only for what you turn on: GitHub, sending to your other Mac, and checking for updates. <a href="privacy.html">Everything that leaves your Mac, and when</a>.</p></div>
+    <div><h3>How does Maui work with Claude Code and Codex?</h3><p>In Maui, open <b>Apps → Claude Code → Connect</b>. From then on Claude Code’s questions, plans and permission requests open at the notch, and you answer with a click, a word, or a screenshot. Codex’s command approvals come to the notch too, and Apps shows each of your sessions as it works.
+</p></div>
+    <div><h3>How do I install Maui?</h3><p>Maui isn’t out yet. When it is: download it, open the download, and drag Maui to Applications. Open it: Maui has no window and no Dock icon, so look at your notch, or press <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>I</kbd>. macOS asks for each permission only when you first use the feature that needs it.</p></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <p>Maui is free, and made with care by Abhinav.</p>
+  <nav aria-label="Footer"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="changelog.html">What’s new</a><a href="https://github.com/heyabhinavhere/maui">GitHub</a></nav>
+</footer>
+</body>
+</html>

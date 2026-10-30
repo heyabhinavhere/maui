@@ -1,0 +1,7 @@
+# Every crawler is welcome, search engines and AI assistants alike.
+# (A crawler reads robots.txt only at the root of a host: on a project site such as github.io/maui this file is
+# not read, and it takes effect once the site has its own domain. The sitemap is submitted in Search Console.)
+User-agent: *
+Allow: /
+
+Sitemap: https://heyabhinavhere.github.io/maui/sitemap.xml

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Maui</title>
+<meta name="description" content="Help with Maui, the app for your Mac’s notch: how to reach support, what Maui needs (macOS 26 on Apple silicon), and how to uninstall it completely.">
+<link rel="canonical" href="https://heyabhinavhere.github.io/maui/support.html">
+<meta name="theme-color" content="#eeeff1">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maui">
+<meta property="og:url" content="https://heyabhinavhere.github.io/maui/support.html">
+<meta property="og:title" content="Support — Maui">
+<meta property="og:description" content="Help with Maui, the app for your Mac’s notch: how to reach support, what Maui needs (macOS 26 on Apple silicon), and how to uninstall it completely.">
+<meta property="og:image" content="https://heyabhinavhere.github.io/maui/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <a class="mark" href="./">Maui</a>
+  <nav class="links" aria-label="Site"><a href="privacy.html">Privacy</a><a href="support.html" aria-current="page">Support</a><a href="changelog.html">What’s new</a><a href="https://github.com/heyabhinavhere/maui">GitHub</a></nav>
+</header>
+<main class="prose">
+<h1>Support.</h1>
+<p class="lede">Open an issue on <a href="https://github.com/heyabhinavhere/maui/issues">Maui’s GitHub</a>. In Maui, Settings → General → <b>Copy diagnostics</b> puts the version and the last half hour of Maui's own log on your clipboard — no file names, tokens or private content are in it — so you can paste it into the issue.</p>
+
+<h2>Requirements</h2>
+<p>macOS 26 or later, on Apple silicon. A MacBook with a notch is Maui's home; other displays get a small shape at the top of the screen.</p>
+
+<h2>Uninstall</h2>
+<p>Do these in order, while Maui is still open — the first steps use its own controls.</p>
+<ol>
+<li>If you turned on <b>Show Claude's usage limits</b>: Maui → Apps → Claude Code → … → turn it off. It takes out only Maui's own status line from Claude Code. (No … menu there? Remove the <code>statusLine</code> entry that runs <code>maui-hook</code> from <code>~/.claude/settings.json</code> by hand.) Maui kept a copy of that file as it first found it, <code>~/.claude/settings.json.before-island</code>; delete it once you don't need it.</li>
+<li>If you connected Claude Code: Apps → Claude Code → … → <b>Disconnect Claude Code…</b>. Or in a terminal: <code>claude plugin uninstall maui@maui</code>, then <code>claude plugin marketplace remove maui</code>.</li>
+<li>If you connected Codex: Apps → Codex → … → <b>Remove Maui's hook…</b> It takes Maui's one entry out of <code>~/.codex/hooks.json</code>.</li>
+<li>If you connected GitHub: Apps → GitHub → <b>Disconnect GitHub</b>, which also ends Maui's access on GitHub. If Maui is already gone, revoke it in GitHub → Settings → Applications.</li>
+<li>Settings → General → turn off <b>Launch Maui at login</b>.</li>
+<li>Quit Maui from its menu-bar item and move it to the Trash.</li>
+<li>Its own files, if you want them gone too: <code>~/Library/Application Support/Island</code> (the Tray's copies, screenshot records, the agent helper), its preferences <code>~/Library/Preferences/com.abhinavjain.Island.plist</code>, and <code>~/Library/Caches/com.abhinavjain.Island</code> and <code>~/Library/HTTPStorages/com.abhinavjain.Island</code> (update checks). ("Island" was Maui's name while it was made; existing installs keep these names so nothing is lost on update.) Your screenshots and original files are never inside these folders.</li>
+<li>Keychain Access: the items named <code>com.abhinavjain.Island.github</code> (your GitHub session) and <code>com.abhinavjain.Island.reach</code> (this Mac's Reach identity and the Macs it is paired with).</li>
+</ol>
+<p>Installed with Homebrew? After steps 1–4, <code>brew uninstall --cask --zap heyabhinavhere/maui/maui</code> does 6 and 7.</p>
+</main>
+<footer class="foot">
+  <p>Maui is free, and made with care by Abhinav.</p>
+  <nav aria-label="Footer"><a href="./">Maui</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="changelog.html">What’s new</a><a href="https://github.com/heyabhinavhere/maui">GitHub</a></nav>
+</footer>
+</body>
+</html>
