@@ -38,13 +38,12 @@
 <li>If you turned on <b>Show Claude's usage limits</b>: Maui → Apps → Claude Code → … → turn it off. It takes out only Maui's own status line from Claude Code. (No … menu there? Remove the <code>statusLine</code> entry that runs <code>maui-hook</code> from <code>~/.claude/settings.json</code> by hand.) Maui kept a copy of that file as it first found it, <code>~/.claude/settings.json.before-island</code>; delete it once you don't need it.</li>
 <li>If you connected Claude Code: Apps → Claude Code → … → <b>Disconnect Claude Code…</b>. Or in a terminal: <code>claude plugin uninstall maui@maui</code>, then <code>claude plugin marketplace remove maui</code>.</li>
 <li>If you connected Codex: Apps → Codex → … → <b>Remove Maui's hook…</b> It takes Maui's one entry out of <code>~/.codex/hooks.json</code>.</li>
-<li>If you connected GitHub: Apps → GitHub → <b>Disconnect GitHub</b>, which also ends Maui's access on GitHub. If Maui is already gone, revoke it in GitHub → Settings → Applications.</li>
+<li>If you connected GitHub: Apps → GitHub → <b>Disconnect GitHub</b>, which also asks GitHub to end Maui's access. To be sure it ended, or if Maui is already gone, revoke it in GitHub → Settings → Applications.</li>
 <li>Settings → General → turn off <b>Launch Maui at login</b>.</li>
 <li>Quit Maui from its menu-bar item and move it to the Trash.</li>
 <li>Its own files, if you want them gone too: <code>~/Library/Application Support/Island</code> (the Tray's copies, screenshot records, the agent helper), its preferences <code>~/Library/Preferences/com.abhinavjain.Island.plist</code>, and <code>~/Library/Caches/com.abhinavjain.Island</code> and <code>~/Library/HTTPStorages/com.abhinavjain.Island</code> (update checks). ("Island" was Maui's name while it was made; existing installs keep these names so nothing is lost on update.) Your screenshots and original files are never inside these folders.</li>
 <li>Keychain Access: the items named <code>com.abhinavjain.Island.github</code> (your GitHub session) and <code>com.abhinavjain.Island.reach</code> (this Mac's Reach identity and the Macs it is paired with).</li>
 </ol>
-<p>Installed with Homebrew? After steps 1–4, <code>brew uninstall --cask --zap heyabhinavhere/maui/maui</code> does 6 and 7.</p>
 </main>
 <footer class="foot">
   <p>Maui is free, and made with care by Abhinav.</p>
