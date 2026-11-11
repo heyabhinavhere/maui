@@ -1,0 +1,40 @@
+{
+  "description": "When Claude stops to ask you something, Maui shows it at the notch, and Maui's page for Claude Code shows each session as it works. If Maui is not running, nothing changes: Claude asks in the terminal as usual.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "AskUserQuestion|ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "h=\"$HOME/Library/Application Support/Island/Agents/maui-hook\"; [ -x \"$h\" ] && exec \"$h\" claude-code; exit 0",
+            "timeout": 5700
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "h=\"$HOME/Library/Application Support/Island/Agents/maui-hook\"; [ -x \"$h\" ] && exec \"$h\" claude-code; exit 0",
+            "timeout": 5700
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "h=\"$HOME/Library/Application Support/Island/Agents/maui-hook\"; [ -x \"$h\" ] && exec \"$h\" claude-code; exit 0",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

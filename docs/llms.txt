@@ -4,7 +4,9 @@
 
 - Price: free. No account, no analytics, no telemetry.
 - Needs: macOS 26 or later, on a Mac with Apple silicon. On a Mac without a notch, or an external display, it sits as a small shape at the top of the screen.
-- Not out yet: coming soon, from this site.
+- Current version: 1.0.0 (6.8 MB), signed with a Developer ID and notarized by Apple.
+- Download: https://github.com/heyabhinavhere/maui/releases/download/v1.0.0/Maui-1.0.0.dmg
+- Homebrew: `brew tap heyabhinavhere/maui https://github.com/heyabhinavhere/maui` then `brew install --cask heyabhinavhere/maui/maui`
 - Made by one person, Abhinav.
 
 ## What it does

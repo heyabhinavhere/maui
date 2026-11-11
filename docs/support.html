@@ -27,7 +27,7 @@
 </header>
 <main class="prose">
 <h1>Support.</h1>
-<p class="lede">Open an issue on <a href="https://github.com/heyabhinavhere/maui/issues">Maui’s GitHub</a>. In Maui, Settings → General → <b>Copy diagnostics</b> puts the version and the last half hour of Maui's own log on your clipboard — no file names, tokens or private content are in it — so you can paste it into the issue.</p>
+<p class="lede">Write to <a href="mailto:hitoabhinav@gmail.com">hitoabhinav@gmail.com</a>. In Maui, Settings → General → <b>Copy diagnostics</b> puts the version and the last half hour of Maui's own log on your clipboard — no file names, tokens or private content are in it — so you can paste it into the email.</p>
 
 <h2>Requirements</h2>
 <p>macOS 26 or later, on Apple silicon. A MacBook with a notch is Maui's home; other displays get a small shape at the top of the screen.</p>
@@ -44,6 +44,7 @@
 <li>Its own files, if you want them gone too: <code>~/Library/Application Support/Island</code> (the Tray's copies, screenshot records, the agent helper), its preferences <code>~/Library/Preferences/com.abhinavjain.Island.plist</code>, and <code>~/Library/Caches/com.abhinavjain.Island</code> and <code>~/Library/HTTPStorages/com.abhinavjain.Island</code> (update checks). ("Island" was Maui's name while it was made; existing installs keep these names so nothing is lost on update.) Your screenshots and original files are never inside these folders.</li>
 <li>Keychain Access: the items named <code>com.abhinavjain.Island.github</code> (your GitHub session) and <code>com.abhinavjain.Island.reach</code> (this Mac's Reach identity and the Macs it is paired with).</li>
 </ol>
+<p>Installed with Homebrew? After steps 1–5, <code>brew uninstall --cask --zap heyabhinavhere/maui/maui</code> does 6 and 7. Step 8, the Keychain items, is still yours.</p>
 </main>
 <footer class="foot">
   <p>Maui is free, and made with care by Abhinav.</p>

@@ -45,6 +45,9 @@
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "macOS 26 or later",
       "processorRequirements": "Apple silicon",
+      "softwareVersion": "1.0.0",
+      "fileSize": "6.8 MB",
+      "downloadUrl": "https://github.com/heyabhinavhere/maui/releases/download/v1.0.0/Maui-1.0.0.dmg",
       "releaseNotes": "https://heyabhinavhere.github.io/maui/changelog.html",
       "image": "https://heyabhinavhere.github.io/maui/icon-512.png",
       "screenshot": [
@@ -65,7 +68,8 @@
         { "@type": "Question", "name": "Is Maui free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Maui is free, with no account and nothing to sign up for." } },
         { "@type": "Question", "name": "Does Maui collect any data?", "acceptedAnswer": { "@type": "Answer", "text": "No. Maui has no account, no analytics and no telemetry. It reads your screenshots' text with macOS's own on-device Vision, and converts files on your Mac. It uses the network only for what you turn on: GitHub, sending to your other Mac, and checking for updates." } },
         { "@type": "Question", "name": "How does Maui work with Claude Code and Codex?", "acceptedAnswer": { "@type": "Answer", "text": "In Maui, open Apps, then Claude Code, then Connect. From then on Claude Code's questions, plans and permission requests open at the notch, and you answer with a click, a word, or a screenshot. Codex's command approvals come to the notch too, and Apps shows each of your sessions as it works." } },
-        { "@type": "Question", "name": "How do I install Maui?", "acceptedAnswer": { "@type": "Answer", "text": "Maui isn’t out yet. When it is: download it, open the download, and drag Maui to Applications. Open it: Maui has no window and no Dock icon, so look at your notch, or press Command-Shift-I. macOS asks for each permission only when you first use the feature that needs it." } }
+        { "@type": "Question", "name": "How do I install Maui?", "acceptedAnswer": { "@type": "Answer", "text": "Download Maui, open the download, and drag Maui to Applications. Open it: Maui has no window and no Dock icon, so look at your notch, or press Command-Shift-I. macOS asks for each permission only when you first use the feature that needs it." } }
+        ,{ "@type": "Question", "name": "Can I install Maui with Homebrew?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Run brew tap heyabhinavhere/maui https://github.com/heyabhinavhere/maui, then brew install --cask heyabhinavhere/maui/maui." } }
       ]
     }
   ]
@@ -73,11 +77,12 @@
 </script>
 </head>
 <body>
-<a class="skip" href="#questions">Skip to the questions</a>
+<a class="skip" href="#get">Skip to download</a>
 
 <div class="show">
 <header class="bar">
   <a class="mark" href="./">Maui</a>
+  <a class="top-dl" href="#get">Download</a>
   <nav class="links" aria-label="Site"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="changelog.html">What’s new</a><a href="https://github.com/heyabhinavhere/maui">GitHub</a></nav>
 </header>
 
@@ -90,7 +95,7 @@
     <h1 class="word">Maui</h1>
     <div class="cap">
       <p><b>A small friend for the notch of your Mac.</b> It keeps your screenshots, holds the files you drop on it, and brings your coding agents’ questions to you.</p>
-      <span class="pill soon">Coming soon</span>
+      <a class="pill" href="https://github.com/heyabhinavhere/maui/releases/download/v1.0.0/Maui-1.0.0.dmg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6.5 10.5 12 16l5.5-5.5M5 20h14"/></svg>Download, free</a>
       <p class="note">macOS 26 or later · Apple silicon</p>
     </div>
   </section>
@@ -195,8 +200,9 @@
   <section class="poster" id="get" data-kind="icon">
     <h2 class="word">Get Maui.</h2>
     <div class="end">
-      <span class="pill soon">Coming soon</span>
+      <a class="pill" href="https://github.com/heyabhinavhere/maui/releases/download/v1.0.0/Maui-1.0.0.dmg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6.5 10.5 12 16l5.5-5.5M5 20h14"/></svg>Download Maui</a>
       <p class="meta">Free · macOS 26 or later · Apple silicon</p>
+      <a class="brew-link" href="#homebrew">or install with Homebrew</a>
     </div>
   </section>
 </main>
@@ -212,8 +218,13 @@
     <div><h3>Is Maui free?</h3><p>Yes. Maui is free, with no account and nothing to sign up for.</p></div>
     <div><h3>Does Maui collect any data?</h3><p>No. Maui has no account, no analytics and no telemetry. It reads your screenshots’ text with macOS’s own on-device Vision, and converts files on your Mac. It uses the network only for what you turn on: GitHub, sending to your other Mac, and checking for updates. <a href="privacy.html">Everything that leaves your Mac, and when</a>.</p></div>
     <div><h3>How does Maui work with Claude Code and Codex?</h3><p>In Maui, open <b>Apps → Claude Code → Connect</b>. From then on Claude Code’s questions, plans and permission requests open at the notch, and you answer with a click, a word, or a screenshot. Codex’s command approvals come to the notch too, and Apps shows each of your sessions as it works.
+<a href="https://github.com/heyabhinavhere/maui/tree/main/claude-code">The plugin’s install, update and removal steps</a>.
 </p></div>
-    <div><h3>How do I install Maui?</h3><p>Maui isn’t out yet. When it is: download it, open the download, and drag Maui to Applications. Open it: Maui has no window and no Dock icon, so look at your notch, or press <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>I</kbd>. macOS asks for each permission only when you first use the feature that needs it.</p></div>
+    <div><h3>How do I install Maui?</h3><p>Download Maui, open the download, and drag Maui to Applications. Open it: Maui has no window and no Dock icon, so look at your notch, or press <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>I</kbd>. macOS asks for each permission only when you first use the feature that needs it.</p></div>
+    <div id="homebrew"><h3>Can I install Maui with Homebrew?</h3><p>Yes, in two steps: add Maui’s tap, then install the cask.</p>
+      <pre class="cmd"><code>brew tap heyabhinavhere/maui https://github.com/heyabhinavhere/maui
+brew install --cask heyabhinavhere/maui/maui</code><button type="button" class="copy" aria-label="Copy the two commands"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8.5" y="8.5" width="11" height="11" rx="2.5"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></svg></button></pre></div>
+    <div><h3>How do I check the download?</h3><p>Maui 1.0.0 is 6.8 MB. Its SHA-256 is <code class="sha">1363408c28ca5dd32c7de4f1e6c7b11173db3a022be724050a35f3d6514dcf36</code>. Maui is signed with a Developer ID and notarized by Apple, and it updates itself from a signed feed. <a href="changelog.html">What changed in each version</a>.</p></div>
   </div>
 </section>
 
